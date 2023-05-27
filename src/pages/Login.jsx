@@ -1,22 +1,33 @@
 import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { setAuth } from "../redux/Login/Actions";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+
+  let signinUsername = useSelector((state) => state.authReducer.username);
+  let signinPassword = useSelector((state) => state.authReducer.password);
 
   const handleLogin = (event) => {
     event.preventDefault();
 
     let obj = {
-      username,
-      password,
+      username: username,
+      isAuth: true,
     };
 
-    console.table(obj);
-
-    navigate("/");
+    if (username !== signinUsername) {
+      alert("Wrong Username! Try Again.");
+    } else if (password !== signinPassword) {
+      alert("Wrong Password! Try Again.");
+    } else {
+      dispatch(setAuth(obj));
+      navigate("/settings");
+    }
   };
 
   return (
@@ -29,6 +40,7 @@ const Login = () => {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <br />
         <label>Password:</label>
@@ -37,6 +49,7 @@ const Login = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <br />
         <button type="submit">Login</button>

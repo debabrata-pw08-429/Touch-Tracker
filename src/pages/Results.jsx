@@ -3,16 +3,10 @@ import Metrics from "../components/Metrics";
 
 const Results = () => {
   return (
-    <div style={{ width: "80%", margin: "auto" }}>
-      <h1 style={{ textAlign: "center", backgroundColor: "white" }}>RESULTS</h1>
+    <div className="results">
+      <h1>RESULTS</h1>
       <Metrics />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          margin: "1rem auto",
-        }}
-      >
+      <div>
         <a href="/">
           <button className="start-button-css">Go Back!</button>
         </a>

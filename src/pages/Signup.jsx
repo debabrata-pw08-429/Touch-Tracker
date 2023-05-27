@@ -1,23 +1,25 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { getSignupDetails } from "../redux/Login/Actions";
+import { useDispatch } from "react-redux";
 
 const Signup = () => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const handleSignup = (event) => {
     event.preventDefault();
 
     let obj = {
-      username,
-      email,
-      password,
+      username: username,
+      email: email,
+      password: password,
     };
 
-    console.table(obj);
-
+    dispatch(getSignupDetails(obj));
     navigate("/login");
   };
 
@@ -31,6 +33,7 @@ const Signup = () => {
           type="text"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          required
         />
         <br />
         <label>Email:</label>
@@ -39,6 +42,7 @@ const Signup = () => {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
+          required
         />
         <br />
         <label>Password:</label>
@@ -47,6 +51,7 @@ const Signup = () => {
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          required
         />
         <br />
         <button type="submit">Signup</button>

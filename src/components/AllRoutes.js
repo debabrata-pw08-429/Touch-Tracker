@@ -8,6 +8,7 @@ import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import Settings from "../pages/Settings";
 import Results from "../pages/Results";
+import PrivateRoute from "./PrivateRoute";
 
 // Export Component_
 function Allroutes() {
@@ -17,7 +18,14 @@ function Allroutes() {
       <Route path="/login" element={<Login />}></Route>
       <Route path="/signup" element={<Signup />}></Route>
       <Route path="/results" element={<Results />}></Route>
-      <Route path="/settings" element={<Settings />}></Route>
+      <Route
+        path="/settings"
+        element={
+          <PrivateRoute>
+            <Settings />
+          </PrivateRoute>
+        }
+      ></Route>
     </Routes>
   );
 }

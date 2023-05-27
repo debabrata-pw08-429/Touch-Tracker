@@ -1,7 +1,7 @@
 // Import Modules_
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import "../App.css";
 
 // Import Components_
@@ -12,7 +12,9 @@ import Instructions from "./Instructions";
 
 // Export Component_
 const Home = () => {
-  let [time, setTime] = useState(5 * 60);
+  let countDown = useSelector((state) => state.settingsReducer.timer);
+  let storedText = useSelector((state) => state.settingsReducer.displaytext);
+  let [time, setTime] = useState(countDown * 60);
   const [running, setRunning] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [startTime, setstartTime] = useState(0);
@@ -20,15 +22,15 @@ const Home = () => {
   const [usertext, setusertext] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  console.log(typingSpeed);
-  let givenKeys = "a s d f j k l ;";
+
+  let givenKeys = storedText;
   let text = usertext;
 
   // Speed Calculation in Words Per Minute_
-  const starTest = useCallback(() => {
+  const starTest = () => {
     let date = new Date();
     setstartTime(date.getTime());
-  }, []);
+  };
 
   const endTest = useCallback(() => {
     let date = new Date();
@@ -82,6 +84,7 @@ const Home = () => {
       clearInterval(interval);
     };
   }, [time, running, navigate, endTest]);
+
   // Timer Functionalities End_
 
   return (
@@ -91,11 +94,13 @@ const Home = () => {
       {toggle ? (
         <></>
       ) : (
-        <TypingBox
-          givenKeys={givenKeys}
-          usertext={usertext}
-          setusertext={setusertext}
-        />
+        <>
+          <TypingBox
+            givenKeys={givenKeys}
+            usertext={usertext}
+            setusertext={setusertext}
+          />
+        </>
       )}
 
       {toggle ? <Instructions /> : <></>}
