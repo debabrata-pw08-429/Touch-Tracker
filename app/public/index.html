@@ -2,42 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link
+      rel="icon"
+      href="data:image/png;base64,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"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
       content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <title>Typing Tracker</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
   </body>
 </html>
