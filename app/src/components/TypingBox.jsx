@@ -1,8 +1,8 @@
 // Import Modules_
 import React, { useRef } from "react";
 import useSound from "use-sound";
-import sound1 from "../media/audio/RightAnswer.mp3";
-import sound2 from "../media/audio/WrongAnswer.mp3";
+import sound1 from "../media/Audio/RightAnswer.mp3";
+import sound2 from "../media/Audio/WrongAnswer.mp3";
 
 // Import Styles_
 import "../App.css";
