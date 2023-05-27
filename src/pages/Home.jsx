@@ -12,7 +12,7 @@ import Instructions from "./Instructions";
 
 // Export Component_
 const Home = () => {
-  let [time, setTime] = useState(1 * 60);
+  let [time, setTime] = useState(5 * 60);
   const [running, setRunning] = useState(false);
   const [toggle, setToggle] = useState(true);
   const [startTime, setstartTime] = useState(0);
@@ -52,7 +52,7 @@ const Home = () => {
   };
 
   const handleReset = () => {
-    setTime(1 * 60);
+    setTime(5 * 60);
     setRunning(false);
   };
 
