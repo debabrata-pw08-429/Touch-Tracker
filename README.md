@@ -6,26 +6,45 @@
 
 <br/>
 
+
+> Installation:
+> 
+- **STEP 1 :** Clone the Github Repo in your VS Code.
+    
+    ```jsx
+    git clone https://github.com/debabrata-pw08-429/Touch-Tracker.git
+    ```
+    
+- **STEP 2 :** Install NPM
+    
+    ```jsx
+    npm install -g
+    ```
+    
+- **STEP 3 :** Install Dependencies
+    
+    ```jsx
+    npm i redux react-redux redux-thunk react-router-dom use-sound
+    ```
+    
+    <br/>
+
 > Main Features and purpose of the application:
 > 
 
 1. **Typing Box:**
     - The application provides a typing box where users can input their keystrokes.
     - Users can see the keys they are typing appear on the screen in real-time.
-    - This feature allows users to practice typing the specific keys (a, s, d, f, j, k, l, ;) without looking at the keyboard.
 2. **Visual Key Display:**
     - The application visually displays the keys that the user is supposed to type next.
     - This visual cue helps users focus on the correct keys and improves their typing accuracy and speed.
 3. **Keystrokes Measurement:**
     - The application measures the number of keys pressed within a 5-minute practice window.
-    - It tracks and displays the total keystrokes made by the user during the practice session.
     - This feature allows users to gauge their typing speed and monitor their progress over time.
-    - Users can set goals and aim to increase the number of keystrokes made within the given time frame, thereby improving their typing speed.
 4. **Accuracy Measurement:**
     - The application measures the accuracy percentage of the user's keystrokes.
     - It compares the user's typed keys with the expected keys and calculates the accuracy rate.
     - Users can see their accuracy percentage displayed on the screen after the practice session.
-    - This feature helps users identify and address typing errors, leading to improved accuracy and fewer mistakes in their typing.
 
 <br/>
 
@@ -57,28 +76,6 @@
     ![TT-ResultsPage.png](https://i.imgur.com/EtRWUKx.png)
 <br/>
 
-
-> Installation:
-> 
-- **STEP 1 :** Clone the Github Repo in your VS Code.
-    
-    ```jsx
-    git clone https://github.com/debabrata-pw08-429/Touch-Tracker.git
-    ```
-    
-- **STEP 2 :** Install NPM
-    
-    ```jsx
-    npm install -g
-    ```
-    
-- **STEP 3 :** Install Dependencies
-    
-    ```jsx
-    npm i redux react-redux redux-thunk react-router-dom use-sound
-    ```
-    
-    <br/>
     
 > Contact and Support:
 > 
