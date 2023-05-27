@@ -25,10 +25,10 @@ const Home = () => {
   let text = usertext;
 
   // Speed Calculation in Words Per Minute_
-  const starTest = () => {
+  const starTest = useCallback(() => {
     let date = new Date();
     setstartTime(date.getTime());
-  };
+  }, []);
 
   const endTest = useCallback(() => {
     let date = new Date();

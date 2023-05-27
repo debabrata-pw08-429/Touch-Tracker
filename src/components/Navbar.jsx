@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import Logo_URL from "../media/Images/TypingTrackerLogo.png";
 import { useNavigate } from "react-router-dom";
+import { FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -25,6 +26,8 @@ const Navbar = () => {
           <a href="/signup">Signup</a>
         </h4>
       </div>
+
+      <FaHamburger className="nav-icon" />
     </div>
   );
 };

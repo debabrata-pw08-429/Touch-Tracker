@@ -14,6 +14,7 @@ const TypingBox = (props) => {
   const [playSuccess] = useSound(sound1);
   const [playError] = useSound(sound2);
   const currIndex = useRef(0);
+  const targetInput = useRef(null);
 
   // Handle Input Event_
   const handleChange = (e) => {
@@ -30,6 +31,7 @@ const TypingBox = (props) => {
     if (e.key !== " " && e.key === givenKeysArr[currIndex.current]) {
       playSuccess();
       currIndex.current++;
+      targetInput.current.style.backgroundColor = "white";
     } else if (e.key === "Backspace") {
       currIndex.current--;
     } else if (
@@ -39,6 +41,9 @@ const TypingBox = (props) => {
     ) {
       playError();
       currIndex.current++;
+      setTimeout(() => {
+        targetInput.current.style.backgroundColor = "#FFA8A8";
+      }, 500);
     }
   };
 
@@ -49,6 +54,7 @@ const TypingBox = (props) => {
         value={usertext}
         onChange={handleChange}
         onKeyDown={handleKeyPress}
+        ref={targetInput}
       />
     </div>
   );
