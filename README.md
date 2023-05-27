@@ -44,17 +44,17 @@
 
 - **Flow 1** : Please read the instructions carefully and then click on the **`"Start Test"`** button.
     
-    ![TT-Homepage.png](https://photos.google.com/share/AF1QipPpGEanBmdFqGvw86KBPQIuIMFS6oErhXolpvVY3mWG2M6RdMcAhQ8PZhWv9BT-Fg/photo/AF1QipNWdrCZIQQkwVkNArWAPUOEzoiCouiDnxZARZDg?key=RV9QaTdOUGJjdllPNWtTLU0ySGp6RlBqRjBJNzFB)
+    ![TT-Homepage.png](https://i.imgur.com/xM4p6gD.png)
     
 
 - **Flow 2** : Once you click on the start button, a **`5-minute timer`** will begin, and you can start typing.
     
-    ![TT-TestStart.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/014b6a85-eec2-43d1-a5eb-3ec04bccb33a/TT-TestStart.png)
+    ![TT-TestStart.png](https://i.imgur.com/XYop9f2.png)
     
 
 - **Flow 3** : When the session is over or if you click on the **`"End Test"`** button, you will be redirected to the results page.
     
-    ![TT-ResultsPage.png](https://s3-us-west-2.amazonaws.com/secure.notion-static.com/80a68a2f-b223-4bce-8682-34ab01708ed3/TT-ResultsPage.png)
+    ![TT-ResultsPage.png](https://i.imgur.com/EtRWUKx.png)
 <br/>
 
 
