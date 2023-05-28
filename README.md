@@ -68,7 +68,7 @@
 
 - **Flow 2** : Once you click on the start button, a **`5-minute timer`** will begin, and you can start typing.
     
-    ![TT-TestStart.png](https://i.imgur.com/XYop9f2.png)
+    ![TT-TestStart.png](https://i.imgur.com/1QlV7Kx.png)
     
 
 - **Flow 3** : When the session is over or if you click on the **`"End Test"`** button, you will be redirected to the results page.
