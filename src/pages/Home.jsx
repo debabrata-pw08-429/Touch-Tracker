@@ -2,6 +2,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
+import { TiStopwatch } from "react-icons/ti";
 import "../App.css";
 
 // Import Components_
@@ -22,7 +23,7 @@ const Home = () => {
   const [usertext, setusertext] = useState("");
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
+  console.log(typingSpeed);
   let givenKeys = storedText;
   let text = usertext;
 
@@ -95,11 +96,21 @@ const Home = () => {
         <></>
       ) : (
         <>
-          <TypingBox
-            givenKeys={givenKeys}
-            usertext={usertext}
-            setusertext={setusertext}
-          />
+          {toggle ? (
+            <></>
+          ) : (
+            <div className="timer-css">
+              <h2>
+                <TiStopwatch className="TiStopwatch" />
+                {formatTime(time)}
+              </h2>
+              <TypingBox
+                givenKeys={givenKeys}
+                usertext={usertext}
+                setusertext={setusertext}
+              />
+            </div>
+          )}
         </>
       )}
 
@@ -131,7 +142,6 @@ const Home = () => {
           >
             END TEST
           </button>
-          {toggle ? <></> : <h2>{formatTime(time)} Mins</h2>}
         </div>
       )}
     </>

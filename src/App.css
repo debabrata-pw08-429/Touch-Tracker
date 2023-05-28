@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Mochiy+Pop+One&family=Poppins&display=swap");
 
 /* Global CSS */
 * {
@@ -107,10 +108,6 @@ a {
   padding: 1rem;
   font-size: 50px;
   text-align: center;
-}
-
-.input-box > input {
-  border-bottom: 5px solid #405cf5;
 }
 
 /* Metrics for User Keys */
@@ -240,7 +237,6 @@ a {
 }
 
 /* Results Page CSS */
-
 .results {
   display: flex;
   justify-content: center;
@@ -255,6 +251,33 @@ a {
   width: 80%;
   background-color: white;
   border-radius: 25px;
+}
+
+.timer-css {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  border-radius: 50%;
+  background: rgba(0, 15, 255, 0.13);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(13px);
+  -webkit-backdrop-filter: blur(13px);
+  border: 1px solid rgba(0, 15, 255, 0.26);
+  padding-bottom: 60px;
+}
+
+.timer-css > h2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "Anonymous Pro", monospace;
+}
+
+.timer-css .TiStopwatch {
+  font-size: 2rem;
+  padding-right: 0.5rem;
 }
 
 @media (max-width: 740px) {
@@ -339,10 +362,6 @@ a {
     padding: 12px;
     font-size: 21px;
     text-align: center;
-  }
-
-  .input-box > input {
-    border-bottom: 2px solid #405cf5;
   }
 
   .start-button-div {
